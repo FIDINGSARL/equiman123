@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: equiman11
+  name: postgres  
+  labels:
+    app: odoo
+spec:
+  ports:
+    - port: 5432
+  selector:
+    app: odoo
+    tier: backend
+  type: NodePort
+

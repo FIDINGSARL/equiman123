@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  namespace: equiman11
+  name: equiman11v1
+  labels:
+    type: local
+    client: uid3
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 60Gi
+  hostPath:
+    path: /data/uid6/equiman11v1/
